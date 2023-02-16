@@ -1,21 +1,17 @@
-import {
-  CapsuleGeometry,
-  MeshPhysicalMaterial,
-  BoxGeometry,
-  MeshBasicMaterial,
-  Mesh,
-} from "three";
-// const material = new MeshBasicMaterial({ color: 0x00ff00 });
-const geometry = new CapsuleGeometry(1, 3, 3, 15);
+import { CapsuleGeometry, MeshPhysicalMaterial, Mesh } from "three";
+
+const geometry = new CapsuleGeometry(1.5, 4, 3, 15);
 const material = new MeshPhysicalMaterial({
   roughness: 0,
-  metalness: 0,
   transmission: 1,
+  transparent: true,
+  opacity: 0.3,
 });
-// const material = new MeshBasicMaterial({ color: 0x00ff00 });
 class Tube {
-  constructor() {
+  constructor(x) {
     const tube = new Mesh(geometry, material);
+    tube.position.x = x;
+    tube.position.z = 0.5;
     tube.rotation.x = 0;
     tube.position.y = 2.5;
     return tube;
