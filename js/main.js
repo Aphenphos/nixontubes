@@ -152,7 +152,7 @@ function onWindowResize() {
 }
 
 const planeGeometry = new PlaneGeometry(75, 75);
-const planeTexture = new TextureLoader().load("./assets/table.avif");
+const planeTexture = new TextureLoader().load("./table.avif");
 const planeMaterial = new MeshPhongMaterial({
   map: planeTexture,
   side: DoubleSide,
@@ -205,7 +205,7 @@ light6.position.z = lightz;
 scene.add(overhead, light1, light2, light3, light4, light5, light6);
 scene.add(tube0, tube1, tube2, tube3, tube4, tube5, plane, Number.group);
 
-const texture = new TextureLoader().load("./assets/wood.jpg");
+const texture = new TextureLoader().load("./wood.jpg");
 const boxGeo = new BoxGeometry(33, 5, 4);
 const boxMat = new MeshPhongMaterial({ map: texture });
 const cube = new Mesh(boxGeo, boxMat);

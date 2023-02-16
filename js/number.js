@@ -6,7 +6,7 @@ class Number {
 
   constructor(digit, x, name) {
     const loader = new FontLoader();
-    loader.load("./assets/font.typeface.json", function (font) {
+    loader.load("./font.typeface.json", function (font) {
       const geometry = new TextGeometry(digit, {
         font: font,
         size: 4,
