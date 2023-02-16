@@ -1,5 +1,4 @@
 import "../css/main.css";
-import wood from "./wood.jpg";
 import Tube from "./tube";
 import {
   Scene,
@@ -206,7 +205,7 @@ light6.position.z = lightz;
 scene.add(overhead, light1, light2, light3, light4, light5, light6);
 scene.add(tube0, tube1, tube2, tube3, tube4, tube5, plane, Number.group);
 
-const texture = new TextureLoader().load(wood);
+const texture = new TextureLoader().load("./wood.jpg");
 const boxGeo = new BoxGeometry(33, 5, 4);
 const boxMat = new MeshPhongMaterial({ map: texture });
 const cube = new Mesh(boxGeo, boxMat);
