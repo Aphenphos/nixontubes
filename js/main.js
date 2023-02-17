@@ -60,8 +60,13 @@ function time() {
     turnOn("minute1", min[0]);
     turnOn("minute2", min[1]);
   }
-  turnOn("hour1", hour[0]);
-  turnOn("hour2", hour[1]);
+  if (!hour[1]) {
+    turnOn("hour1", "0");
+    turnOn("hour2", "0");
+  } else {
+    turnOn("hour1", hour[0]);
+    turnOn("hour2", hour[1]);
+  }
 }
 const lit = new Color("rgb(255,100,100)");
 function turnOn(place, time) {
