@@ -61,7 +61,7 @@ function time() {
   }
   if (!hour[1]) {
     turnOn("hour1", "0");
-    turnOn("hour2", "0");
+    turnOn("hour2", hour[0]);
   } else {
     turnOn("hour1", hour[0]);
     turnOn("hour2", hour[1]);
