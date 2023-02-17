@@ -5,7 +5,6 @@ import {
   PerspectiveCamera,
   Color,
   WebGLRenderer,
-  AxesHelper,
   TextureLoader,
   BoxGeometry,
   MeshPhongMaterial,
@@ -167,9 +166,6 @@ const plane = new Mesh(planeGeometry, planeMaterial);
 plane.rotation.x = 1.57;
 plane.position.y = -1;
 plane.position.x = 15;
-
-const axesHelper = new AxesHelper(5);
-scene.add(axesHelper);
 
 const tube0 = new Tube(1.25);
 const tube1 = new Tube(6.25);
